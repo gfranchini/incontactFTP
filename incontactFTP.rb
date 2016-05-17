@@ -14,9 +14,7 @@ Net::FTP.open(CONTENT_SERVER_DOMAIN_NAME, CONTENT_SERVER_FTP_LOGIN, CONTENT_SERV
   File.open("files.txt", "w+") do |f|
     files.each {|x| f.puts(x)}
   end
-
-
-
+  
 end
 
 # # check if the directory existence
