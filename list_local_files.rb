@@ -15,13 +15,12 @@ require 'fileutils'
 #end
 
 #go through directory
-list = Array.new
-Dir.chdir(DRIVE)  #change to specific directory
-Dir['*'].each do |x| #loop throgh directory and put into array.
-    list << x 
+local = Array.new
+Dir.chdir(DRIVE)  
+Dir['*'].each do |x|
+    local << x 
 	File.open("local.txt", "w+") do |f|
-		list.each {|x| f.puts(x)}
+		local.each {|x| f.puts(x)}
 	end
 end
-FileUtils.mv(DRIVE + '\\local.txt','C:\\Users\\gfranchini\\Desktop')
-
+FileUtils.mv(DRIVE + '\\local.txt','C:\\Users\\gfranchini\\Desktop\\incontactFTP')
