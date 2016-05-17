@@ -10,7 +10,7 @@ Net::FTP.open(CONTENT_SERVER_DOMAIN_NAME, CONTENT_SERVER_FTP_LOGIN, CONTENT_SERV
   #files is an array of files
   files = ftp.list
   # prints out new file with files in directory
-  File.new("files.txt", "w+")
+  #File.new("files.txt", "w+")
   File.open("files.txt", "w+") do |f|
     files.each {|x| f.puts(x)}
   end
