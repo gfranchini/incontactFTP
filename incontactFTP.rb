@@ -1,5 +1,5 @@
 require 'net/ftp'
-require './variables.rb'
+require './login.rb'
 
 
 # LOGIN and LIST available files at default home directory
