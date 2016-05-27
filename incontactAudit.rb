@@ -25,9 +25,13 @@ end
 FileUtils.mv("local_files.csv","C:\\Users\\#{user}\\Desktop\\")
  
 audit = Array.new
-audit = local - incontact
+audit = incontact - local
 
 File.open("audit.csv", "w+") do |f|
 	audit.each {|x| f.puts(x)}
 end
 FileUtils.mv("audit.csv","C:\\Users\\#{user}\\Desktop\\")
+
+p incontact.count
+p local.count
+p audit.count
